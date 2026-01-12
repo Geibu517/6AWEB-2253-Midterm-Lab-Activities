@@ -1,0 +1,85 @@
+<div class="container">
+
+  <!-- Class Discussion Section -->
+  <h2 class="section-title">Class Discussion</h2>
+
+  <!-- Date Pipe Card -->
+  <div class="card">
+    <h3>Date Pipe</h3>
+    <p>Today's date: {{ presentDate }}</p>
+    <p>Today's date (default): {{ presentDate | date }}</p>
+    <p>Short date: {{ presentDate | date: 'shortDate' }}</p>
+    <p>Full date: {{ presentDate | date: 'fullDate' }}</p>
+    <p>Formatted date: {{ presentDate | date: 'M/dd/yyyy' }}</p>
+    <p>Hours and minutes: {{ presentDate | date: 'h:mm' }}</p>
+  </div>
+
+  <!-- Uppercase & Lowercase Card -->
+  <div class="card">
+    <h3>Uppercase & Lowercase Pipes</h3>
+    <p>Uppercase: {{ name | uppercase }}</p>
+    <p>Lowercase: {{ name | lowercase }}</p>
+    <p>Original: {{ name }}</p>
+  </div>
+
+  <!-- Chain Pipe Card -->
+  <div class="card">
+    <h3>Chain Pipe</h3>
+    <p>Date with uppercase: {{ presentDate | date: 'fullDate' | uppercase }}</p>
+    <p>Date with lowercase: {{ presentDate | date: 'medium' | lowercase }}</p>
+  </div>
+
+  <!-- Currency Pipe Card -->
+  <div class="card">
+    <h3>Currency Pipe</h3>
+    <p>Default: {{ price | currency:'':true }}</p>
+    <p>INR: {{ price | currency:'INR' }}</p>
+    <p>EUR: {{ price | currency:'EUR' }}</p>
+    <p>JPY: {{ price | currency:'JPY' }}</p>
+    <p>PHP: {{ price | currency:'PHP' }}</p>
+  </div>
+
+  <!-- Slice Pipe Card -->
+  <div class="card">
+    <h3>Slice Pipe</h3>
+    <p>Start index: {{ Fruits | slice:2 }}</p>
+    <p>Start & End index: {{ Fruits | slice:1:4 }}</p>
+    <p>Negative index: {{ Fruits | slice:-2 }}</p>
+    <p>Negative start & end: {{ Fruits | slice:-4:-2 }}</p>
+  </div>
+
+  <!-- Decimal Pipe Card -->
+  <div class="card">
+    <h3>Decimal Pipe</h3>
+    <p>{{ decimalNum1 | number }}</p>
+    <p>{{ decimalNum2 | number }}</p>
+  </div>
+
+  <!-- Separator -->
+  <hr class="separator">
+
+  <!-- Experimental Pipes Section -->
+  <h2 class="section-title">Experimental Pipes</h2>
+
+  <!-- Percent Pipe Card -->
+  <div class="card">
+    <h3>Percent Pipe</h3>
+    <p>{{ percentage | percent }}</p>
+    <p>{{ percentage | percent:'1.1-1' }}</p>
+  </div>
+
+  <!-- JSON Pipe Card -->
+  <div class="card">
+    <h3>JSON Pipe</h3>
+    <pre>{{ user | json }}</pre>
+  </div>
+
+  <!-- Async Pipe Card -->
+  <div class="card">
+    <h3>Async Pipe</h3>
+    <p>{{ messagePromise | async }}</p>
+    <h4>Async Pipe With Observable</h4>
+    <p>{{ message$ | async }}</p>
+  </div>
+
+</div>
