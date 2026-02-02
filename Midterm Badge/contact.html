@@ -1,0 +1,13 @@
+<h1>Contact Us</h1>
+
+<form>
+  <input placeholder="Name" [(ngModel)]="name" name="name">
+  <input placeholder="Email" [(ngModel)]="email" name="email">
+  <textarea placeholder="Message" [(ngModel)]="message" name="message"></textarea>
+  <button type="button">Submit</button>
+</form>
+
+<h2>Form Preview</h2>
+<p>Name: {{ name | uppercase }}</p>
+<p>Email: {{ email }}</p>
+<p>Message: {{ message }}</p>

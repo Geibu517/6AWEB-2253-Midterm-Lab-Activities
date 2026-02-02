@@ -1,0 +1,11 @@
+<h1>Welcome to the Community Help Desk</h1>
+<p>
+  This portal pulls remote records and shares them across pages.
+</p>
+
+<h2>Latest Updates</h2>
+
+<div *ngFor="let post of latestPosts$ | async">
+  <h3>{{ post.title | uppercase }}</h3>
+  <p>{{ post.body | truncate:80 }}</p>
+</div>
